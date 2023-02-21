@@ -42,7 +42,7 @@ public class MyHttpHandler implements HttpHandler {
         // set response headers
         httpExchange.getResponseHeaders().set("Content-Type", "text/plain");
         httpExchange.getResponseHeaders().set("Access-Control-Allow-Origin", "*");
-        httpExchange.sendResponseHeaders(201, 0);
+        httpExchange.sendResponseHeaders(200, 0);
 
         // set response body
         OutputStream os = httpExchange.getResponseBody();
@@ -71,7 +71,7 @@ public class MyHttpHandler implements HttpHandler {
         String htmlResponse = "<html>" +
                 "<body>" +
                 "<h1>" +
-                "Hello WORLD" +
+                "Hello SDK WORLD" +
                 requestParamValue +
                 "</h1>" +
                 "</body>" +
